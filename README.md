@@ -51,3 +51,8 @@ Then access the link shown in the terminal, e.g. `http://localhost:5173/`.
 ### Physical AI
 
 Photography is a highly logical activity, a good photo needs to understand the advantage of object, the environment, the light, the relationships between objects. These are natually a result of physic rules. The ability to generate image of AI does not mean they understand the objects relationships and so on, while a physical AI can.
+
+### Future improvements
+
+- Add ability to stream the preview of camera to the server for real time suggestions.
+- Add the overlay of 50% translucency which gives symbols to hint user how to change the device to get optimal photo.
