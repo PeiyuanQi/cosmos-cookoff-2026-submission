@@ -14,6 +14,11 @@ Everything you need to know about photography!
 
 Try out now and don't miss it 🥹
 
+**Featrues:**
+- Score your photos.
+- Gives quick comments on how to improve this photo, so you could fix it immediately.
+- Save the photos so you keep it!
+
 > NOTE: Ideally this should be a Android / iOS App, given the limitation of distributing the app, a web app is used instead.
 
 ## Prerequisite and setup
@@ -42,3 +47,7 @@ Then access the link shown in the terminal, e.g. `http://localhost:5173/`.
 ### Demo
 
 [Video Drive Link](https://drive.google.com/file/d/1dqZ-TyNCsuOnWSu9DsDLHa83ttA-Yk5I/view?usp=drive_link)
+
+### Physical AI
+
+Photography is a highly logical activity, a good photo needs to understand the advantage of object, the environment, the light, the relationships between objects. These are natually a result of physic rules. The ability to generate image of AI does not mean they understand the objects relationships and so on, while a physical AI can.
