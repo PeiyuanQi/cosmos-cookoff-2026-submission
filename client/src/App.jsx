@@ -1,6 +1,15 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 
-const SYSTEM_PROMPT = 'You are an experienced photographer. Please give a brief review of the photo and suggest practical small changes (e.g. tilt up the camera, lower the light, zoom in a bit) to improve the photo quality. Keep suggestions short and actionable.'
+const SYSTEM_PROMPT = [
+  'You are an experienced photographer.',
+  'Please give a brief review of the photos from the user, including a review score, a few sentences of ',
+  'comments, and suggest practical small changes if score is below 95 ',
+  '(e.g. tilt up the camera, lower the light, zoom in a bit, suggest a new posture) ',
+  'to improve the photo quality. ',
+  'The review score is a number ',
+  'from 0 - 100. ',
+  'If the score is above 95, just say "Good photo" and congratulate the user.\n',
+].join(' ')
 const MODEL_ID = 'nvidia/Cosmos-Reason2-8B'
 const MIN_ZOOM = 1
 const MAX_ZOOM = 3
@@ -292,11 +301,10 @@ export default function App() {
           model: MODEL_ID,
           max_tokens: 512,
           messages: [
-            { role: 'system', content: SYSTEM_PROMPT },
             {
               role: 'user',
               content: [
-                { type: 'text', text: 'Please review this photo and suggest small improvements.' },
+                { type: 'text', text: SYSTEM_PROMPT +'Answer the question using the following format:\n<think>\nYour reasoning.\n</think>\nWrite your final answer immediately after the </think> tag.\n',},
                 {
                   type: 'image_url',
                   image_url: { url: `data:image/jpeg;base64,${base64}` },

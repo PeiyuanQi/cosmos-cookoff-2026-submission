@@ -1,6 +1,6 @@
-# Photo Review Camera
+# Phytographer
 
-Minimal React app: full-screen camera with zoom (1–3×), tap-to-focus, and drag-to-adjust exposure. Capture sends the image to the vLLM backend (OpenAI-compatible) and shows photo review suggestions below.
+A camera App understand physics and helps you improve.
 
 ## Setup
 
